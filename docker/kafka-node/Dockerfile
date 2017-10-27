@@ -15,7 +15,7 @@ RUN apk update && apk upgrade && \
     tar -zxf kafka.tgz -C /usr/ && \
     echo "Cleaning up Kafka tmp files" && \
     rm kafka.tgz && \
-    chown -R root:root
+    chown -R root:root $KAFKA_HOME
 
 ADD server.properties $KAFKA_HOME/config/kafka-server.properties
 
