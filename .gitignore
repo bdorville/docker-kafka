@@ -1,0 +1,28 @@
+# =============== #
+# build resources #
+# =============== #
+data/
+executables/
+derby.log
+metastore_db/
+
+target/
+bin/
+out/
+logs/
+tmp/
+.history
+dist/
+.classpath
+.project/
+
+# ============= #
+# IDEA IntelliJ #
+# ============= #
+.idea
+*.iml
+
+# === #
+# ViM #
+# === #
+*.swp

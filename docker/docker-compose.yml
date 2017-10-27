@@ -1,0 +1,22 @@
+zookeeper:
+  image: bdorville/kafka
+  command: bin/zookeeper-server-start.sh config/zookeeper.properties
+  hostname: zookeeper
+  expose:
+    - 2181
+    - 2888
+    - 3888
+  ports:
+    - 2181:2181
+    - 2888:2888
+    - 3888:3888
+
+kafka0:
+  image: bdorville/kafka
+  hostname: kafka0
+  links:
+    - zookeeper
+  expose:
+    - 9092
+  ports:
+    - 9092:9092
